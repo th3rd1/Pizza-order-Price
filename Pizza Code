@@ -1,0 +1,41 @@
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+# What size does the customer want
+if size == "S":
+    Bill = 15
+    if add_pepperoni == "Y":
+        Bill += 2
+    else: Bill
+elif size == "M":
+    Bill = 20
+else: Bill = 25
+
+# Do they want pepperoni?
+if add_pepperoni == "Y":
+    if size == "M" or size == "L":
+        Bill+=3
+    Else: Bill+2
+else: Bill
+
+# Do they want extra cheese?
+if extra_cheese == "Y":
+    Bill += 1
+else: Bill
+
+# Bill output
+print(f"Your final bill is ${Bill}")
+
+# created 10/1/22
+
+# I was surprised this worked. Didn't take as long as I expected either / Realized what I first wrote didn't work. Had if add_pepperoni == "Y": under small and further down so larger sizes got the correct amount billed, but if size was S it added $3 and $2. Was able to revise to current code
+
+# Originally had if add_pepperoni under each size but realized it was redudnant and moved to under the first if statement closed/ (originally kept it under small size if statmement but that didn't work)
+
+# Took longest time with the adding pepperoni variable after figuring out the original issue. Forgot a += and had just Bill+3 which stumped me for awhile
